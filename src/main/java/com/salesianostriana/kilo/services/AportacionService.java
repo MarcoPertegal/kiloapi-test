@@ -147,18 +147,14 @@ public class AportacionService {
             if(kilosActuales < result*-1)
                 return Optional.empty();
             else{
-                detalle.getTipoAlimento().getKilosDisponibles().setCantidadDisponible(
-                        kilosNuevos
-                );
+                detalle.getTipoAlimento().getKilosDisponibles().setCantidadDisponible(kilosNuevos);
                 detalle.setCantidadKg(kgNuevos);
                 tipoAlimentoSaveService.save(detalle.getTipoAlimento());
                 return Optional.of(aportacionRepository.save(detalle.getAportacion()));
             }
         }
         else{
-            detalle.getTipoAlimento().getKilosDisponibles().setCantidadDisponible(
-                    kilosNuevos
-            );
+            detalle.getTipoAlimento().getKilosDisponibles().setCantidadDisponible(kilosNuevos);
             detalle.setCantidadKg(kgNuevos);
             tipoAlimentoSaveService.save(detalle.getTipoAlimento());
             return Optional.of(aportacionRepository.save(detalle.getAportacion()));
