@@ -13,7 +13,7 @@ import java.util.List;
 public interface ClaseRepository extends JpaRepository<Clase, Long> {
 
     @Query(value = """
-               SELECT SUM (det.cantidadKg) 
+               SELECT SUM (det.cantidadKg)
                FROM Clase c
                JOIN Aportacion a ON c.id = a.clase
                JOIN DetalleAportacion det ON a.id = det.aportacion
