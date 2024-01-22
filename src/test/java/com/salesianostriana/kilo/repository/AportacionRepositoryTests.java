@@ -50,8 +50,6 @@ public class AportacionRepositoryTests {
     void findByPetId(){
         List<AportacionesReponseDTO> result = aportacionRepository.getAllAportaciones();
         Assertions.assertFalse(result.isEmpty());
-        /*
-        Assertions.assertFalse(result.isEmpty());
-        Assertions.assertEquals("spayed", result.get(1).getDescription());*/
+        Assertions.assertEquals(1, result.get(1).getId());
     }
 }
