@@ -1,5 +1,10 @@
 package com.salesianostriana.kilo.service;
 
+import com.salesianostriana.kilo.repositories.AportacionRepository;
+import com.salesianostriana.kilo.services.TipoAlimentoSaveService;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class AportacionServiceTests {
     //TEST realizado por Marco
     /*
@@ -31,6 +36,17 @@ public class AportacionServiceTests {
         }
     }
      */
+    @Autowired
+    AportacionRepository aportacionRepository;
+
+    @Autowired
+    TipoAlimentoSaveService tipoAlimentoSaveService;
+
+    @Test
+    void cambiarKilosDetalle(){
+
+    }
+
 
 
 }
