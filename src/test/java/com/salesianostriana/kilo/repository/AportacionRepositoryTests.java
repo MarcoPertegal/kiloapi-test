@@ -23,7 +23,7 @@ import java.util.List;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ActiveProfiles({"postgresql"})//seleccionamos el perfil activo
 @Testcontainers
-@Sql(value = "classpath:import.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+        //@Sql(value = "classpath:import.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(value = "classpath:test/insert-aportacion.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(value = "classpath:test/delete-aportacion.sql", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 public class AportacionRepositoryTests {
